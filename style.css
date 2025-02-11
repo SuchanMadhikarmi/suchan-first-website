@@ -190,7 +190,7 @@ section{
     text-align: center;
 }
 
-#socials.container{
+#socials-container{
     display: flex;
     justify-content: center;
     margin-top: 1rem;
@@ -255,6 +255,7 @@ section{
 
 #about {
     position: relative;
+    
 }
 
 .about-containers{
@@ -271,6 +272,9 @@ section{
 .about-containers,
 .about-details-container {
     display: flex;
+    align-items: self-start;
+    justify-content: start;
+
 }
 
 .about-pic {
@@ -292,12 +296,16 @@ section{
     border: rgb(53, 53, 53) 0.1rem solid ;
     border-color: rgb(163, 163, 163);
     text-align: center;
+
 }
 
 
 .section-container{
     gap: 4rem;
     height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section__pic-container{
@@ -320,25 +328,46 @@ section{
     margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.experience-details-containerr {
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    margin-top: 2rem;
 }
+.experience-details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 8px; /* Equivalent to gap-2 (2 * 4px) */
+    justify-items: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets */
+    .experience-details-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+@media (max-width: 640px) { /* Mobile Devices */
+    .experience-details-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column */
+    }
+}
+
 
 .article-container{
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
-    flex-direction: row;
     gap: 2.5rem;
     justify-content: space-around;
+
 
 }
 article{
     display: flex;
     width: 10rem;
-    justify-content: space-around;
     gap: 0.5rem;
 }
 
