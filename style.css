@@ -193,8 +193,8 @@ section{
 #socials.container{
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
     gap: 1rem;
+    padding-top: 20px;
 }
 
 /* ICON */
@@ -211,6 +211,7 @@ section{
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-bottom: 10px;
 }
 
 .btn{
@@ -338,8 +339,9 @@ section{
 article{
     display: flex;
     width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
 }
 
 article .icon{
@@ -434,6 +436,9 @@ footer p {
     flex-wrap: wrap;
 }
 
-
+.experience-container article{
+    display: flex;
+    gap: 10px;
+}
 
 
