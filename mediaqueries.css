@@ -58,7 +58,6 @@
 @media screen and (max-width: 600px){
     #contact, footer{
         height: 40vh;
-
     }
     #profile{
         height: 83vh;
@@ -74,14 +73,11 @@
    }
 
    .about-containers, .contact-info-upper-container, .btn-container{
-
      flex-wrap: wrap;
-
    }
 
    .contact-info-container{
       margin: 0;
-    
    }
 
    .contact-info-container p, .nav-links li a{
@@ -90,7 +86,6 @@
 
    .experience-sub-title {
     font-size: 1.25rem;
-
    }
 
    .logo{
@@ -115,14 +110,31 @@
 
    .title{
     font-size: 2rem;
-
    }
 
    .text-container {
     text-align: justify;
    }
-
-
-
-
+   
+   /* Ensure proper spacing for sections */
+   section {
+       margin: 0 3%;
+       padding-top: 2vh;
+       margin-bottom: 3rem;
+   }
+   
+   /* Improve card spacing on mobile */
+   .modern-card, .certificate-card {
+       margin-bottom: 1.5rem;
+   }
+   
+   /* Ensure GitHub links are visible */
+   .card-back {
+       padding: 1.5rem 1rem;
+   }
+   
+   .modern-link {
+       margin-top: 0.5rem;
+       display: inline-block;
+   }
 }

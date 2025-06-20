@@ -64,13 +64,16 @@ a:hover{
 
 #hamburger-nav{
     display: none;
+    position: relative;
+    z-index: 1000;
 }
 
 .hamburger-menu{
     position: relative;
     display: inline-block;
-
+    z-index: 1001;
 }
+
 .hamburger-icon{
     display: flex;
     flex-direction: column;
@@ -78,7 +81,7 @@ a:hover{
     height: 24px;
     width: 30px;
     cursor: pointer;
-
+    z-index: 1002;
 }
 
 .hamburger-icon span{
@@ -97,7 +100,9 @@ a:hover{
     max-height: 0;
     overflow: hidden;
     transition: all 300ms ease-in-out;
-
+    z-index: 1003;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 .menu-links a{
      display: block;
@@ -717,6 +722,59 @@ footer p {
     }
     .card-front img {
         height: 80px;
+    }
+    
+    .certificates-grid {
+        gap: 1.2rem;
+        padding: 1.2rem 0.5rem;
+    }
+    .certificate-card {
+        width: 180px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .modern-grid, .certificates-grid {
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .modern-card {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 1rem;
+    }
+    .certificate-card {
+        width: 280px;
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+    .card-front img {
+        height: 100px;
+    }
+    .card-back {
+        padding: 1.5rem 1rem;
+    }
+    .card-back p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    .modern-link {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .modern-tabs {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+    }
+    .tab {
+        width: 200px;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
