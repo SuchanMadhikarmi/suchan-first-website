@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – Progress Bars</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #fafbfc; color: #222; margin: 0; padding: 0; }
+    .skills-section { max-width: 500px; margin: 60px auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+    .skills-section h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+    .skill { margin-bottom: 1.5rem; }
+    .skill-label { display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-weight: 500; }
+    .progress-bar-bg { background: #e9ecef; border-radius: 8px; height: 12px; width: 100%; overflow: hidden; }
+    .progress-bar { height: 100%; border-radius: 8px; background: linear-gradient(90deg, #4f8cff, #38e7b7); width: 0; transition: width 1.2s cubic-bezier(.77,0,.18,1); }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skill">
+      <div class="skill-label"><span>Virtual Machines</span><span>90%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar" data-width="90"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>Static Malware Analysis</span><span>70%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar" data-width="70"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>Incident Response</span><span>80%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar" data-width="80"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>Cloud Security</span><span>75%</span></div>
+      <div class="progress-bar-bg"><div class="progress-bar" data-width="75"></div></div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.progress-bar').forEach(bar => {
+        setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-width') + '%';
+        }, 300);
+      });
+    });
+  </script>
+</body>
+</html> 

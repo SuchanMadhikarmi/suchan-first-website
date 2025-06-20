@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – SVG Icons with Tooltips</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f7f8fa; color: #222; margin: 0; }
+    .skills-section { max-width: 600px; margin: 60px auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-align: center; }
+    .icons-grid { display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; margin-top: 2rem; }
+    .skill-icon-wrap { position: relative; display: inline-block; cursor: pointer; }
+    .skill-icon svg { width: 48px; height: 48px; fill: #4f8cff; transition: fill 0.2s; }
+    .skill-icon-wrap:hover svg { fill: #38e7b7; }
+    .tooltip { visibility: hidden; opacity: 0; background: #222; color: #fff; text-align: center; border-radius: 6px; padding: 0.5rem 1rem; position: absolute; z-index: 1; bottom: -2.5rem; left: 50%; transform: translateX(-50%); transition: opacity 0.2s; font-size: 0.98rem; white-space: nowrap; pointer-events: none; }
+    .skill-icon-wrap:hover .tooltip { visibility: visible; opacity: 1; }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <div class="icons-grid">
+      <div class="skill-icon-wrap">
+        <span class="skill-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="tooltip">Virtual Machines: Deploy/manage VMs</span>
+      </div>
+      <div class="skill-icon-wrap">
+        <span class="skill-icon">
+          <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 8h8v8H8z" fill="#fff"/></svg>
+        </span>
+        <span class="tooltip">Malware Analysis: Static/Dynamic</span>
+      </div>
+      <div class="skill-icon-wrap">
+        <span class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="10"/></svg>
+        </span>
+        <span class="tooltip">Incident Response: Detect/Respond</span>
+      </div>
+      <div class="skill-icon-wrap">
+        <span class="skill-icon">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="6"/><ellipse cx="12" cy="12" rx="6" ry="10"/></svg>
+        </span>
+        <span class="tooltip">Cloud Security: AWS/Azure</span>
+      </div>
+      <div class="skill-icon-wrap">
+        <span class="skill-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="5"/><circle cx="7" cy="12" r="2" fill="#fff"/></svg>
+        </span>
+        <span class="tooltip">Threat Hunting: Proactive</span>
+      </div>
+      <div class="skill-icon-wrap">
+        <span class="skill-icon">
+          <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M8 8h8v8H8z" fill="#fff"/></svg>
+        </span>
+        <span class="tooltip">Automation: Security Workflows</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html> 

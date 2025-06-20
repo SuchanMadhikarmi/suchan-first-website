@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – Carousel</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f7f8fa; color: #222; margin: 0; }
+    .skills-section { max-width: 400px; margin: 60px auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-align: center; }
+    .skills-section h2 { margin-bottom: 2rem; font-size: 2rem; }
+    .carousel { position: relative; overflow: hidden; height: 140px; }
+    .carousel-track { display: flex; transition: transform 0.6s cubic-bezier(.77,0,.18,1); }
+    .carousel-slide { min-width: 100%; box-sizing: border-box; padding: 1.5rem; background: #e3f0ff; border-radius: 14px; font-size: 1.1rem; font-weight: 500; color: #4f8cff; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .carousel-controls { margin-top: 1.2rem; display: flex; justify-content: center; gap: 1.5rem; }
+    .carousel-btn { background: #38e7b7; border: none; border-radius: 50%; width: 38px; height: 38px; color: #fff; font-size: 1.3rem; cursor: pointer; transition: background 0.2s; }
+    .carousel-btn:active { background: #4f8cff; }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>Skill Carousel</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">💻<br>Virtual Machines<br><span style="font-size:0.95rem;font-weight:400;">Deploy/manage VMs</span></div>
+        <div class="carousel-slide">🦠<br>Malware Analysis<br><span style="font-size:0.95rem;font-weight:400;">Static/Dynamic</span></div>
+        <div class="carousel-slide">🛡️<br>Incident Response<br><span style="font-size:0.95rem;font-weight:400;">Detect/Respond</span></div>
+        <div class="carousel-slide">☁️<br>Cloud Security<br><span style="font-size:0.95rem;font-weight:400;">AWS/Azure</span></div>
+        <div class="carousel-slide">🔍<br>Threat Hunting<br><span style="font-size:0.95rem;font-weight:400;">Proactive</span></div>
+        <div class="carousel-slide">⚙️<br>Automation<br><span style="font-size:0.95rem;font-weight:400;">Security Workflows</span></div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="prevBtn">&#8592;</button>
+      <button class="carousel-btn" id="nextBtn">&#8594;</button>
+    </div>
+  </section>
+  <script>
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    let idx = 0;
+    function updateCarousel() {
+      track.style.transform = `translateX(-${idx * 100}%)`;
+    }
+    document.getElementById('prevBtn').onclick = () => {
+      idx = (idx - 1 + slides.length) % slides.length;
+      updateCarousel();
+    };
+    document.getElementById('nextBtn').onclick = () => {
+      idx = (idx + 1) % slides.length;
+      updateCarousel();
+    };
+  </script>
+</body>
+</html> 

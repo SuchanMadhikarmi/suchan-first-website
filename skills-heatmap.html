@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – Heatmap</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f7f8fa; color: #222; margin: 0; }
+    .skills-section { max-width: 500px; margin: 60px auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-align: center; }
+    .skills-section h2 { margin-bottom: 2rem; font-size: 2rem; }
+    .heatmap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; justify-items: center; }
+    .heatmap-cell { width: 110px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 500; font-size: 1rem; transition: box-shadow 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .proficiency-1 { background: #e3f0ff; color: #4f8cff; }
+    .proficiency-2 { background: #b3e5fc; color: #222; }
+    .proficiency-3 { background: #4f8cff; }
+    .proficiency-4 { background: #38e7b7; }
+    .proficiency-5 { background: #00796b; }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>Skill Heatmap</h2>
+    <div class="heatmap-grid">
+      <div class="heatmap-cell proficiency-5">Virtual Machines</div>
+      <div class="heatmap-cell proficiency-4">Malware Analysis</div>
+      <div class="heatmap-cell proficiency-3">Incident Response</div>
+      <div class="heatmap-cell proficiency-2">Cloud Security</div>
+      <div class="heatmap-cell proficiency-2">Threat Hunting</div>
+      <div class="heatmap-cell proficiency-1">Automation</div>
+    </div>
+  </section>
+</body>
+</html> 

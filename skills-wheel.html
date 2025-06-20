@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – Wheel</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f7f8fa; color: #222; margin: 0; }
+    .skills-section { max-width: 600px; margin: 60px auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-align: center; }
+    .wheel-container { display: flex; flex-direction: column; align-items: center; }
+    .skill-wheel { position: relative; width: 320px; height: 320px; border-radius: 50%; margin: 2rem 0; }
+    .wheel-segment { position: absolute; width: 160px; height: 160px; top: 80px; left: 80px; border-radius: 0 160px 0 0; transform-origin: 0 160px; background: #e3f0ff; color: #222; display: flex; align-items: flex-end; justify-content: center; font-weight: 500; font-size: 1rem; cursor: pointer; transition: background 0.2s, color 0.2s, z-index 0s; z-index: 1; }
+    .wheel-segment.active { background: #38e7b7; color: #fff; z-index: 2; }
+    .segment-info { min-height: 2.5rem; font-size: 1.1rem; color: #38e7b7; margin-top: 1rem; transition: color 0.2s; }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>Skill Wheel</h2>
+    <div class="wheel-container">
+      <div class="skill-wheel" id="skillWheel">
+        <!-- Segments will be injected by JS -->
+      </div>
+      <div class="segment-info" id="segmentInfo">Click a segment to learn more</div>
+    </div>
+  </section>
+  <script>
+    const skills = [
+      { name: 'Virtual Machines', info: 'Deploying and managing VMs for labs and production.' },
+      { name: 'Malware Analysis', info: 'Static and dynamic analysis to identify threats.' },
+      { name: 'Incident Response', info: 'Detecting and responding to security incidents.' },
+      { name: 'Cloud Security', info: 'Securing AWS/Azure environments.' },
+      { name: 'Threat Hunting', info: 'Proactively searching for cyber threats.' },
+      { name: 'Automation', info: 'Automating security tasks and workflows.' }
+    ];
+    const wheel = document.getElementById('skillWheel');
+    const info = document.getElementById('segmentInfo');
+    const segAngle = 360 / skills.length;
+    skills.forEach((skill, i) => {
+      const seg = document.createElement('div');
+      seg.className = 'wheel-segment';
+      seg.style.transform = `rotate(${i * segAngle}deg) skewY(-30deg)`;
+      seg.textContent = skill.name;
+      seg.addEventListener('click', () => {
+        document.querySelectorAll('.wheel-segment').forEach(s => s.classList.remove('active'));
+        seg.classList.add('active');
+        info.textContent = skill.info;
+        info.style.color = '#38e7b7';
+      });
+      wheel.appendChild(seg);
+    });
+  </script>
+</body>
+</html> 

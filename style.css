@@ -141,10 +141,13 @@ a:hover{
 
 section{
     padding-top: 4vh;
-    height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
+    margin-bottom: 4.5rem;
+}
+section:last-of-type {
+    margin-bottom: 0;
 }
 
 .section-container{
@@ -165,6 +168,17 @@ section{
     height: 400px;
     width: 400px;
     margin: auto 0;
+}
+
+.section__pic-container img {
+    border-radius: 0;
+}
+
+#profile .section__pic-container img {
+    border-radius: 50%;
+    border: 4px solid #e0e0e0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    overflow: hidden;
 }
 
 .section__text{
@@ -275,8 +289,13 @@ section{
 }
 
 .about-pic {
-    border-radius: 2rem;
-
+    width: 380px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 50% / 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: block;
+    overflow: hidden;
 }
 
 .arrow {
@@ -308,26 +327,26 @@ section{
 }
 
 
-/* Experience */
+/* Skills */
 
-#experience {
+#skills {
     position: relative;
 }
 
-.experience-sub-title{
+.skills-sub-title{
     color: rgb(85, 85, 85);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.skills-details-containerr {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.article-container{
+.skills-container article{
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
@@ -439,6 +458,459 @@ footer p {
 .experience-container article{
     display: flex;
     gap: 10px;
+}
+
+/* Modern Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+.skill-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+    padding: 1.2rem 1rem;
+    text-align: left;
+    border: 1px solid #ececec;
+    transition: box-shadow 0.18s;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skill-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-color: #e0e0e0;
+}
+.skill-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.08rem;
+    color: #181818;
+    font-weight: 600;
+}
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.skill-card li {
+    color: #555;
+    font-size: 0.98rem;
+    margin: 0;
+    line-height: 1.5;
+}
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .skill-card {
+        padding: 0.8rem 0.5rem;
+        min-height: 70px;
+    }
+    .skill-card h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Modern Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+.project-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    padding: 1.5rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    transition: box-shadow 0.2s;
+}
+.project-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.project-img {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1.2rem;
+}
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #222;
+    text-align: center;
+}
+.project-card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.project-tags span {
+    background: #f3f3f3;
+    color: #333;
+    border-radius: 1rem;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-img {
+        height: 160px;
+    }
+}
+
+/* Modern Tabs */
+.modern-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 2rem 0 2.5rem 0;
+}
+.tab {
+    background: #f5f5f7;
+    border: none;
+    outline: none;
+    padding: 0.7rem 2.2rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: none;
+    letter-spacing: 0.02em;
+}
+.tab.active, .tab:hover {
+    background: #222;
+    color: #fff;
+}
+
+/* Modern Projects Grid */
+.modern-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: #f7f8fa;
+    border-radius: 2rem;
+    box-shadow: 0 4px 32px rgba(60,60,100,0.07);
+    padding: 2.5rem 1.5rem;
+}
+
+/* Modern Card (Flip) */
+.modern-card {
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 240px;
+    height: 320px;
+    perspective: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s cubic-bezier(.4,2,.6,1);
+    transform-style: preserve-3d;
+}
+.modern-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    background: #fff;
+    padding: 1.2rem 1rem;
+}
+.card-front img {
+    width: 100%;
+    border-radius: 0.8rem;
+    margin-bottom: 1.1rem;
+    object-fit: cover;
+    height: 120px;
+}
+.card-front h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+    text-align: center;
+}
+.card-back {
+    background: #fff;
+    color: #222;
+    transform: rotateY(180deg);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding-top: 2.2rem;
+    transition: background 0.3s, color 0.3s;
+}
+.card-back p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+.modern-link {
+    color: #fff;
+    background: #222;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(100,100,150,0.08);
+}
+.modern-link:hover {
+    background: #111;
+    color: #fff;
+    filter: none;
+}
+
+@media (max-width: 900px) {
+    .modern-grid {
+        gap: 1.2rem;
+        padding: 1.2rem 0.5rem;
+    }
+    .modern-card {
+        width: 180px;
+        height: 240px;
+    }
+    .card-front img {
+        height: 80px;
+    }
+}
+
+/* Certificates Grid (same as modern-grid) */
+.certificates-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 0 auto;
+    max-width: 900px;
+    background: #f7f8fa;
+    border-radius: 2rem;
+    box-shadow: 0 4px 32px rgba(60,60,100,0.07);
+    padding: 2.5rem 1.5rem;
+}
+.certificate-card {
+    width: 240px;
+    height: 200px;
+    perspective: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.certificate-card .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s cubic-bezier(.4,2,.6,1);
+    transform-style: preserve-3d;
+}
+.certificate-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.certificate-card .card-front, .certificate-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    background: #fff;
+    padding: 1.2rem 1rem;
+    text-align: center;
+}
+.certificate-card .card-front h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+.certificate-card .card-front p {
+    color: #555;
+    font-size: 1rem;
+}
+.certificate-card .card-back {
+    background: #fff;
+    color: #222;
+    transform: rotateY(180deg);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    padding-top: 2.2rem;
+    transition: background 0.3s, color 0.3s;
+}
+.certificate-card .card-back p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+/* Certificate Card Logo Background */
+.cert-bg-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    transform: translate(-50%, -50%);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+}
+.certificate-card .card-front h2,
+.certificate-card .card-front p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove dark mode styles */
+body.dark-mode {
+    background: #181a1b;
+    color: #f5f5f7;
+    transition: background 0.4s, color 0.4s;
+}
+body.dark-mode section, body.dark-mode .modern-grid, body.dark-mode .certificates-grid {
+    background: #23272a !important;
+    color: #f5f5f7;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+}
+body.dark-mode .card-front, body.dark-mode .card-back, body.dark-mode .certificate-card .card-front, body.dark-mode .certificate-card .card-back {
+    background: #23272a !important;
+    color: #f5f5f7 !important;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+body.dark-mode .modern-link {
+    background: #fff;
+    color: #23272a;
+}
+body.dark-mode .modern-link:hover {
+    background: #e5e5e5;
+    color: #23272a;
+}
+body.dark-mode .tab {
+    background: #23272a;
+    color: #f5f5f7;
+}
+body.dark-mode .tab.active, body.dark-mode .tab:hover {
+    background: #fff;
+    color: #23272a;
+}
+
+/* Section Fade/Slide-in Animation */
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(.4,2,.6,1), transform 0.8s cubic-bezier(.4,2,.6,1);
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Skills Section Four-Column Grid */
+.skills-details-containerr .about-containers {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.skills-details-containerr .details-container {
+  flex: 1 1 0;
+}
+.skills-details-containerr .article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2.2rem;
+  align-items: center;
+  justify-items: start;
+}
+.skills-details-containerr article {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.92rem;
+  background: none;
+  border-radius: 0;
+  padding: 0.805rem 0;
+  box-shadow: none;
+  border: none;
+  font-size: 1.15rem;
+  margin: 0;
+}
+.skills-details-containerr article h3 {
+  margin: 0;
+  font-size: 1.173rem;
+  font-weight: 500;
+  color: #181818;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.skills-details-containerr .icon {
+  width: 1.725rem;
+  height: 1.725rem;
+  flex-shrink: 0;
+}
+@media (max-width: 900px) {
+  .skills-details-containerr .about-containers {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .skills-details-containerr .article-container {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .skills-details-containerr article {
+    padding: 0.5rem 0.7rem;
+  }
 }
 
 

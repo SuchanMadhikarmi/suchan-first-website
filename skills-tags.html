@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – Filterable Tags</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f8fafb; color: #222; margin: 0; }
+    .skills-section { max-width: 600px; margin: 60px auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+    .skills-section h2 { text-align: center; margin-bottom: 1.5rem; font-size: 2rem; }
+    .filter-btns { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; }
+    .filter-btn { background: #e3f0ff; border: none; border-radius: 20px; padding: 0.5rem 1.2rem; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background: #38e7b7; color: #fff; }
+    .tags-grid { display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center; }
+    .skill-tag { background: #f0f1f3; border-radius: 18px; padding: 0.5rem 1.1rem; font-size: 1rem; color: #333; transition: background 0.2s; }
+    .skill-tag.hide { display: none; }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <div class="filter-btns">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="cloud">Cloud</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+      <button class="filter-btn" data-filter="tools">Tools</button>
+    </div>
+    <div class="tags-grid">
+      <span class="skill-tag" data-cat="cloud">AWS</span>
+      <span class="skill-tag" data-cat="cloud">Azure</span>
+      <span class="skill-tag" data-cat="security">Incident Response</span>
+      <span class="skill-tag" data-cat="security">Malware Analysis</span>
+      <span class="skill-tag" data-cat="security">Threat Hunting</span>
+      <span class="skill-tag" data-cat="tools">Wireshark</span>
+      <span class="skill-tag" data-cat="tools">Metasploit</span>
+      <span class="skill-tag" data-cat="tools">Terraform</span>
+      <span class="skill-tag" data-cat="cloud">IAM</span>
+      <span class="skill-tag" data-cat="security">File Integrity Monitoring</span>
+    </div>
+  </section>
+  <script>
+    const btns = document.querySelectorAll('.filter-btn');
+    const tags = document.querySelectorAll('.skill-tag');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        tags.forEach(tag => {
+          if (filter === 'all' || tag.getAttribute('data-cat') === filter) {
+            tag.classList.remove('hide');
+          } else {
+            tag.classList.add('hide');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html> 

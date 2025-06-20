@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills – Radar Chart</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f7f8fa; color: #222; margin: 0; }
+    .skills-section { max-width: 500px; margin: 60px auto; padding: 2rem; background: #fff; border-radius: 18px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); text-align: center; }
+    canvas { margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <canvas id="skillsRadar" width="350" height="350"></canvas>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('skillsRadar').getContext('2d');
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['Virtual Machines', 'Malware Analysis', 'Incident Response', 'Cloud Security', 'Threat Hunting', 'Automation'],
+        datasets: [{
+          label: 'Proficiency',
+          data: [90, 75, 80, 70, 65, 60],
+          fill: true,
+          backgroundColor: 'rgba(79,140,255,0.2)',
+          borderColor: '#4f8cff',
+          pointBackgroundColor: '#38e7b7',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: '#38e7b7'
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: { legend: { display: false } },
+        scales: { r: { angleLines: { display: false }, suggestedMin: 0, suggestedMax: 100 } }
+      }
+    });
+  </script>
+</body>
+</html> 
