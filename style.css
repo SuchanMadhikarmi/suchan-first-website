@@ -319,6 +319,25 @@ section:last-of-type {
     text-align: center;
 }
 
+.text-container {
+    margin-top: 2rem;
+}
+
+.text-container p {
+    color: rgb(85, 85, 85);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding: 0 0.5rem;
+}
+
+.text-container p:last-child {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: rgb(60, 60, 60);
+}
+
 
 .section-container{
     gap: 4rem;
@@ -465,7 +484,7 @@ footer p {
     gap: 10px;
 }
 
-/* Modern Skills Grid */
+/* Modern Skills Grid - DISABLED for checkmark list format
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -519,6 +538,73 @@ footer p {
         font-size: 1rem;
     }
 }
+*/
+
+/* Modern Skills Tabs - DISABLED for checkmark list format
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    transition: all 0.2s ease;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    border-color: #ddd;
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: rgb(53, 53, 53);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.skill-tab-content {
+    background: #f7f8fa;
+    border-radius: 2rem;
+    box-shadow: 0 4px 32px rgba(60,60,100,0.07);
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .skill-card {
+        padding: 0.8rem;
+        min-width: 100px;
+    }
+    
+    .skill-card h3 {
+        font-size: 0.9rem;
+    }
+    
+    .skill-tab-content {
+        padding: 1.5rem 1rem;
+    }
+}
+*/
 
 /* Modern Projects Grid */
 .projects-grid {
@@ -610,6 +696,169 @@ footer p {
 .tab.active, .tab:hover {
     background: #222;
     color: #fff;
+}
+
+/* Featured Project Section */
+.featured-project {
+    margin: 2rem auto 3rem auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.featured-title {
+    text-align: center;
+    color: rgb(85, 85, 85);
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 2rem 0 1rem 0;
+    margin: 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.featured-project-card {
+    background: #fff;
+    border-radius: 0;
+}
+
+.featured-card-content {
+    display: flex;
+    align-items: center;
+    padding: 2.5rem;
+    gap: 2.5rem;
+}
+
+.featured-image {
+    flex: 0 0 320px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid #eaeaea;
+}
+
+.featured-details {
+    flex: 1;
+}
+
+.featured-details h3 {
+    font-size: 1.8rem;
+    color: rgb(53, 53, 53);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.featured-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgb(85, 85, 85);
+    margin-bottom: 1.5rem;
+}
+
+.featured-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.tech-tag {
+    background: #f8f9fa;
+    color: rgb(85, 85, 85);
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #eaeaea;
+}
+
+.featured-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.featured-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.featured-btn.primary {
+    background: rgb(53, 53, 53);
+    color: white;
+    box-shadow: 0 2px 8px rgba(53, 53, 53, 0.2);
+}
+
+.featured-btn.primary:hover {
+    background: rgb(0, 0, 0);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.featured-btn.secondary {
+    background: white;
+    color: rgb(53, 53, 53);
+    border: 1px solid rgb(163, 163, 163);
+}
+
+.featured-btn.secondary:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(53, 53, 53, 0.2);
+}
+
+/* Responsive Featured Project */
+@media screen and (max-width: 768px) {
+    .featured-card-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+    
+    .featured-image {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .featured-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .featured-title {
+        font-size: 1.5rem;
+        padding: 1.5rem 0 0.8rem 0;
+    }
+    
+    .featured-details h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Modern Projects Grid */
@@ -866,6 +1115,12 @@ footer p {
 .certificate-card .card-front p {
     position: relative;
     z-index: 1;
+}
+
+/* DataCamp logo specific styling for lighter appearance */
+.cert-bg-logo[src*="datacamp"] {
+    opacity: 0.10;
+    filter: grayscale(60%) brightness(1.2);
 }
 
 /* Remove dark mode styles */

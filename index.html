@@ -46,7 +46,7 @@
         <div class="section__text">
             <p class="section__text__p1">Hello, I'm</p>
             <h1 class="title">Suchan Madhikarmi</h1>
-            <p class="section__text__p2">DevOps & Cloud Engineer | AWS SAA Certified | ISC2 CC & Google Cybersecurity Certified</p>
+            <p class="section__text__p2">DevOps & Cloud Engineer | Certified in AWS & Cybersecurity | Exploring Generative AI & LLMs</p>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./assets/last.pdf')">Download CV</button>
                 <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
@@ -69,7 +69,7 @@
                     <div class="details-container">
                         <img src="./assets/experience.png" alt="Experience icon" class="icon" />
                         <h3>Experience</h3>
-                        <p>2+ years<br>In Self Learning & Projects</p>
+                        <p>3+ years<br>In Self Learning & Projects</p>
                     </div>
                     <div class="details-container" >
                         <img src="./assets/education.png" alt="Education icon" class="icon" />
@@ -78,7 +78,13 @@
                     </div>
                 </div>
                 <div class="text-container">
-                    <p>Aspiring DevSecOps professional with a strong foundation in both cybersecurity and DevOps. I'm AWS Solutions Architect Associate certified, ISC2 CC, Google Cybersecurity certified, and DevOps certified from Udemy. I've completed hands-on projects using Ansible, Docker, Kubernetes, Jenkins, Terraform, and more many of which are showcased on my GitHub. My journey began in cybersecurity with projects like SOAR automation and honeypot deployment, and I'm now focused on cloud and DevOps, aiming to bridge both worlds through DevSecOps.</p>
+                    <p>I'm an Aspiring DevOps Engineer with a strong focus on cloud automation, infrastructure as code, and CI/CD pipelines. I'm AWS Solutions Architect Associate certified and hold multiple credentials, including ISC2 CC and Google Cybersecurity, reflecting my broader expertise in cloud and security. My hands-on projects span Ansible, Docker, Kubernetes, Jenkins, Terraform, and monitoring stacks, many of which are showcased on my GitHub.</p>
+                    
+                    <p>While my primary focus is DevOps and Cloud Engineering, I bring valuable experience from cybersecurity, having worked on projects like SOAR automation, honeypot deployment, and DevSecOps pipelines integrating tools like Trivy, Gitleaks, and SonarQube.</p>
+                    
+                    <p>Recently, I've also been exploring Generative AI in DevOps and Security workflows, experimenting with prompt engineering, Ollama-powered local LLMs, and AI-driven automation to enhance monitoring and incident response.</p>
+                    
+                    <p>My goal is to bridge DevOps, Security, and AI—building reliable, secure, and intelligent cloud-native systems.</p>
                 </div>
             </div>
         </div>
@@ -87,50 +93,142 @@
     <section id="skills">
         <p class="section__text__p1">Explore My</p>
         <h1 class="title">Skills</h1>
-        <div class="skills-details-containerr">
-            <div class="about-containers">
-                <div class="details-container">
-                    <div class="article-container">
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Cloud Computing</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Linux</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Networking</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Git</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>GitHub Actions</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Bash Scripting</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Python</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Terraform</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Ansible</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Jenkins</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Docker</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Kubernetes</h3></div></article>
+        
+        <div class="tabs modern-tabs">
+            <button class="tab active" onclick="showSkillTab('devops-cloud')">DevOps & Cloud</button>
+            <button class="tab" onclick="showSkillTab('cybersecurity')">Cybersecurity</button>
+            <button class="tab" onclick="showSkillTab('ai-programming')">AI & Programming</button>
+        </div>
+        
+        <div class="skill-tab-content" id="devops-cloud" style="display:block;">
+            <div class="skills-details-containerr">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <div class="article-container">
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>AWS</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Docker</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Kubernetes</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Helm</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Terraform</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Ansible</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Jenkins</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>GitHub Actions</h3></div></article>
+                        </div>
                     </div>
-                </div>
-                <div class="details-container">
-                    <div class="article-container">
-                        <!-- <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Kubernetes</h3></div></article> -->
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Prometheus</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Grafana</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Vagrant</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>AWS</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>HTML</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>CSS</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>JavaScript</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>C (Basics)</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Java (Basics)</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>C++ (Basics)</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Nessus</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Splunk</h3></div></article>
-                        <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Wireshark</h3></div></article>
+                    <div class="details-container">
+                        <div class="article-container">
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Trivy</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>SonarQube</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Gitleaks</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Prometheus</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Grafana</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Linux</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Git</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Bash Scripting</h3></div></article>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="skill-tab-content" id="cybersecurity" style="display:none;">
+            <div class="skills-details-containerr">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <div class="article-container">
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>SOAR Automation</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Splunk (SIEM)</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Wireshark</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Vulnerability Scanning</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Network Security</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Incident Response</h3></div></article>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="article-container">
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Honeypot Deployment</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Threat Intelligence</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Log Analysis</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Endpoint Security</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Firewall & IDS/IPS</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Cloud Security (IAM)</h3></div></article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skill-tab-content" id="ai-programming" style="display:none;">
+            <div class="skills-details-containerr">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <div class="article-container">
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Python</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Prompt Engineering</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Ollama & Local LLMs</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>CrewAI (Agents)</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>AI Automation</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>AIOps Fundamentals</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>LangChain Framework</h3></div></article>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div class="article-container">
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>OpenAI & HuggingFace</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Generative AI Workflows</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>JavaScript</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>HTML & CSS</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>Java (Basics)</h3></div></article>
+                            <article><img src="./assets/checkmark.png" alt="Skill icon" class="icon" /><div><h3>C / C++ (Basics)</h3></div></article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function showSkillTab(tab) {
+                document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+                document.querySelector('.tab[onclick*="' + tab + '"]')?.classList.add('active'); 
+                document.querySelectorAll('.skill-tab-content').forEach(tc => tc.style.display = 'none');
+                document.getElementById(tab).style.display = 'block';
+            }
+        </script>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
     </section>
     <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
-        <div class="tabs modern-tabs">
+        
+        <!-- Featured Project -->
+        <div class="featured-project">
+            <h2 class="featured-title">Featured Project</h2>
+            <div class="featured-project-card">
+                <div class="featured-card-content">
+                    <div class="featured-image">
+                        <img src="assets/dev-learning-website.png" alt="DevOps Hub Learning Platform" />
+                    </div>
+                    <div class="featured-details">
+                        <h3>DevOps Hub (Learning Platform)</h3>
+                        <p class="featured-description">
+                            Your comprehensive platform for mastering DevOps concepts, practicing interviews, and building hands-on experience with real-world scenarios. 
+                            This interactive learning hub provides structured content, practical exercises, and industry-relevant knowledge to help professionals 
+                            and students excel in their DevOps journey.
+                        </p>
+                        <div class="featured-tech-stack">
+                            <span class="tech-tag">DevOps Education</span>
+                            <span class="tech-tag">Interactive Learning</span>
+                            <span class="tech-tag">Interview Prep</span>
+                            <span class="tech-tag">Hands-on Practice</span>
+                            <span class="tech-tag">Real-world Scenarios</span>
+                        </div>
+                        <div class="featured-buttons">
+                            <a class="featured-btn primary" href="https://www.suchanmadhikarmi.xyz/" target="_blank"> Visit DevOps Hub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        <div class="tabs modern-tabs">
             <button class="tab active" onclick="showTab('devops')">DevOps</button>
             <button class="tab" onclick="showTab('cloud')">Cloud</button>
             <button class="tab" onclick="showTab('cyber')">Cybersecurity</button>
@@ -246,6 +344,32 @@
                     <div class="card-back">
                         <p>Credential for networking fundamentals.</p>
                         <a class="modern-link" href="https://www.credly.com/badges/760ecf1c-de2c-408d-b938-c6ac53bc9b60/linked_in_profile" target="_blank">Verify</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate-card modern-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="cert-bg-logo" src="assets/datacamp.png" alt="DataCamp Logo" />
+                        <h2>Generative AI Concepts</h2>
+                        <p>DataCamp</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Understanding of generative AI fundamentals and concepts.</p>
+                        <a class="modern-link" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/f54fb9a2a3a159fdb707eb6b8299a39f2c1ce436" target="_blank">Verify</a>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate-card modern-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img class="cert-bg-logo" src="assets/datacamp.png" alt="DataCamp Logo" />
+                        <h2>Understanding Prompt Engineering</h2>
+                        <p>DataCamp</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Mastery of prompt engineering techniques and best practices.</p>
+                        <a class="modern-link" href="https://www.datacamp.com/completed/statement-of-accomplishment/course/17b23a4a6babae48298f4fef13a7521167c2b527" target="_blank">Verify</a>
                     </div>
                 </div>
             </div>
